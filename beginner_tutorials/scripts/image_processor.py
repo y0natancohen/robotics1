@@ -17,7 +17,7 @@ def callback(data):
 
         double_message_service = rospy.ServiceProxy('double_message', DoubleMessage)
         response = double_message_service(color)
-        return response.answer
+        print(response.answer)
 
     except rospy.ServiceException, e:
         print "Service call failed: %s" % e
